@@ -19,7 +19,7 @@ namespace Heuristics.TechEval.Web.Controllers {
 		}
 
 		public ActionResult List() {
-			var allMembers = _context.Members.ToList();
+			var allMembers = _context.Members.Include("Category").ToList();
 
 			return View(allMembers);
 		}

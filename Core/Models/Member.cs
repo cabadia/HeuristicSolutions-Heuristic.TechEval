@@ -1,11 +1,16 @@
-﻿namespace Heuristics.TechEval.Core.Models {
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-	public class Member {
+namespace Heuristics.TechEval.Core.Models
+{
+
+	public class Member
+	{
 
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string Email { get; set; }
+				
+		public virtual Category Category { get; set; }
 	}
 }
-
 

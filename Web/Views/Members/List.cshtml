@@ -22,6 +22,7 @@
                 <th scope="row">@member.Id</th>
                 <td>@member.Name</td>
                 <td>@member.Email</td>
+                <td>@Html.DisplayFor(modelItem => member.Category.Name)</td>
                 <td>@Html.ActionLink("Edit", "Edit", new { id = member.Id }) </td>
             </tr>
         }
